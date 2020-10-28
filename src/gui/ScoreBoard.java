@@ -20,7 +20,6 @@ public class ScoreBoard extends HBox implements HasButtonPage {
 	private Controller controller;
 
 	public ScoreBoard(Controller controller) {
-		String fontpath = ClassLoader.getSystemResource("font/PixelEmulator-xq08.ttf").toString();
 		this.setPrefSize(50 * 15, 50);
 		this.setSpacing(50);
 		this.setBackground(new Background(new BackgroundFill(Color.BROWN, null, null)));
@@ -34,15 +33,15 @@ public class ScoreBoard extends HBox implements HasButtonPage {
 		HBox buttonController = new HBox();
 		timer = new Label("0:00");
 		timer.setPrefSize(100, 50);
-		timer.setFont(Font.loadFont(fontpath, 20));
+		timer.setFont(Font.font("Time New Roman", 20));
 
 		pauseButton = new Button("PAUSE");
-		pauseButton.setFont(Font.loadFont(fontpath, 14));
+		pauseButton.setFont(Font.font("Time New Roman", 14));
 		pauseButton.setPrefSize(100, 50);
 		pauseButton.setFocusTraversable(false);
 
 		mainMenuButton = new Button("MAIN MENU");
-		mainMenuButton.setFont(Font.loadFont(fontpath, 12));
+		mainMenuButton.setFont(Font.font("Time New Roman", 12));
 		mainMenuButton.setPrefSize(100, 50);
 		mainMenuButton.setFocusTraversable(false);
 

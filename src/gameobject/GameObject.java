@@ -69,8 +69,8 @@ public abstract class GameObject {
 	}
 
 	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath.equals("") ? ClassLoader.getSystemResource("image/placeholder.png").toString()
-				: ClassLoader.getSystemResource(String.format("image/%s.png", imagePath)).toString();
+		this.imagePath = imagePath.equals("") ? ClassLoader.getSystemResource("placeholder.png").toString()
+				: ClassLoader.getSystemResource(String.format("%s.png", imagePath)).toString();
 	}
 
 }

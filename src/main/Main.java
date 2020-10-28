@@ -10,12 +10,19 @@ public class Main extends Application {
 	private GameController gameController;
 	private StartPageController startPageController;
 	public static void main(String[] args) {
+		try {
 		launch(args);
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 	}
 
 	@SuppressWarnings("exports")
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws Exception {
+		try {
 		startPageController = new StartPageController();
 		gameController = new GameController();
 	
@@ -27,6 +34,11 @@ public class Main extends Application {
 		primaryStage.setScene(startPageController.getScene());
 		primaryStage.setResizable(false);
 		primaryStage.show();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 	}
 
 	@Override

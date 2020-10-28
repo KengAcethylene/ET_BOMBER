@@ -130,15 +130,15 @@ public class BombArea {
 		showRangeBySite(Site.TOP);
 		showRangeBySite(Site.RIGHT);
 		showRangeBySite(Site.LEFT);
-		ImageView imageView = new ImageView(new Image(ClassLoader.getSystemResource("image/bombAreaC.png").toString()));
+		ImageView imageView = new ImageView(new Image(ClassLoader.getSystemResource("bombAreaC.png").toString()));
 		bomb.getLayer().getChildren().add(imageView);
 		imageView.relocate(xPos * 50, yPos * 50);
 		allImageViews.add(imageView);
 	}
 
 	public void showRangeBySite(Site site) {
-		String imagePathTB = ClassLoader.getSystemResource("image/bombArea2.png").toString();
-		String imagePathLR = ClassLoader.getSystemResource("image/bombArea1.png").toString();
+		String imagePathTB = ClassLoader.getSystemResource("bombArea2.png").toString();
+		String imagePathLR = ClassLoader.getSystemResource("bombArea1.png").toString();
 		switch (site) {
 		case TOP:
 			for (int j = 0; j < getRange(); j++) {

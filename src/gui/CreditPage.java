@@ -19,11 +19,10 @@ public class CreditPage extends VBox implements HasButtonPage {
 
 	public CreditPage(StartPage startPage) {
 		createPage();
-		String fontpath = ClassLoader.getSystemResource("font/PixelEmulator-xq08.ttf").toString();
 
 		backButton = new Button("Back");
 		backButton.setFocusTraversable(false);
-		backButton.setFont(Font.loadFont(fontpath, 14));
+		backButton.setFont(Font.font("Time New Roman", 14));
 
 		setButtonAction();
 		this.setSpacing(16);
@@ -42,9 +41,8 @@ public class CreditPage extends VBox implements HasButtonPage {
 	}
 
 	private void createPage() {
-		String fontpath = ClassLoader.getSystemResource("font/PixelEmulator-xq08.ttf").toString();
 		Label headerlabel = new Label(" Credit ");
-		headerlabel.setFont(Font.loadFont(fontpath, 30));
+		headerlabel.setFont(Font.font("Time New Roman", 30));
 		headerlabel.setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE, null, null)));
 
 		ArrayList<String> names = new ArrayList<String>();
@@ -61,9 +59,9 @@ public class CreditPage extends VBox implements HasButtonPage {
 			Label from = new Label("from");
 			Label web = new Label("www.flaticon.com");
 
-			firstword.setFont(Font.loadFont(fontpath, 18));
-			from.setFont(Font.loadFont(fontpath, 18));
-			web.setFont(Font.loadFont(fontpath, 18));
+			firstword.setFont(Font.font("Time New Roman", 18));
+			from.setFont(Font.font("Time New Roman", 18));
+			web.setFont(Font.font("Time New Roman", 18));
 
 			web.setTextFill(Color.LIGHTSKYBLUE);
 			HBox hbox = new HBox(10);
@@ -77,9 +75,8 @@ public class CreditPage extends VBox implements HasButtonPage {
 	}
 
 	private Label createAuthorLabel(String name) {
-		String fontpath = ClassLoader.getSystemResource("font/PixelEmulator-xq08.ttf").toString();
 		Label author = new Label(name);
-		author.setFont(Font.loadFont(fontpath, 18));
+		author.setFont(Font.font("Time New Roman", 18));
 		author.setTextFill(Color.LIGHTSKYBLUE);
 		return author;
 	}
